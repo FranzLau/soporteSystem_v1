@@ -3,23 +3,19 @@
 	$idEmpUpdate = $_POST['editIdEmp'];
 	$nomEmpUpdate = $_POST['editNombEmp'];
 	$apeEmpUpdate = $_POST['editApeEmp'];
-	$tdocEmpUpdate = $_POST['editTipoDocEmp'];
-	$ndocEmpUpdate = $_POST['editNumDocEmp'];
-	$telfEmpUpdate = $_POST['editTelfEmp'];
-	$mailEmpUpdate = $_POST['editEmailEmp'];
+	$cuentaEmpUpdate = $_POST['editCuentaEmp'];
+	$estaEmpUpdate = $_POST['editEstaEmp'];
 	$userEmpUpdate = $_POST['editUserEmp'];
 	$passEmpUpdate = $_POST['editPassEmp'];
-	$estaEmpUpdate = $_POST['editEstaEmp'];
+	$cargoEmpUpdate = $_POST['EditCargoEmp'];
 
 	$upd = $con->query("UPDATE empleado SET nom_emp='$nomEmpUpdate',
                     											ape_emp='$apeEmpUpdate',
-                    											tipodoc_emp='$tdocEmpUpdate',
-                    											numdoc_emp='$ndocEmpUpdate',
-                    											telf_emp='$telfEmpUpdate',
-                    											email_emp='$mailEmpUpdate',
+                    											doc_emp='$cuentaEmpUpdate',
+																					estado_emp='$estaEmpUpdate',
                     											user_emp='$userEmpUpdate',
                     											pass_emp='$passEmpUpdate',
-                    											estado_emp='$estaEmpUpdate'
+                    											id_cargo='$cargoEmpUpdate'
 										                 WHERE id_emp= '$idEmpUpdate' ");
 	if ($upd) {
 			echo json_encode(array('error' => false));

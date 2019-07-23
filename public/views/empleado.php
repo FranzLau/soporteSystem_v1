@@ -91,10 +91,8 @@
             $('#editIdEmp').val(datos['idempphp']);
             $('#editNombEmp').val(datos['nomempphp']);
             $('#editApeEmp').val(datos['apempphp']);
-            $('#editTipoDocEmp').val(datos['tdocempphp']);
-            $('#editNumDocEmp').val(datos['ndocempphp']);
-            $('#editTelfEmp').val(datos['fonempphp']);
-            $('#editEmailEmp').val(datos['emaempphp']);
+            $('#editCuentaEmp').val(datos['cuentaempphp']);
+            $('#EditCargoEmp').val(datos['cargoempphp']);
             $('#editUserEmp').val(datos['userempphp']);
             $('#editPassEmp').val(datos['passempphp']);
             $('#editEstaEmp').val(datos['estaempphp']);

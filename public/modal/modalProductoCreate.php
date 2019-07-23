@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle"><i class="fas fa-file mr-2"></i>Nueva Habitación</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle"><i class="fas fa-file mr-2"></i>Nuevo Equipo</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -33,15 +33,37 @@
             </div>
           </div>
           <div class="form-group row">
-            <label for="detalleNewProd" class="col-sm-3 col-form-label col-form-label-sm">Detalles:</label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control form-control-sm" id="detalleNewProd" name="detalleNewProd" placeholder="Ingrese algun detalle...">
+            <label for="serieNewProd" class="col-sm-3 col-form-label col-form-label-sm">Serie:</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control form-control-sm" id="serieNewProd" name="serieNewProd" placeholder="123...">
             </div>
           </div>
           <div class="form-group row">
-            <label for="precioNewProd" class="col-sm-3 col-form-label col-form-label-sm">Precio:</label>
-            <div class="col-sm-4">
-              <input type="number" step="any" class="form-control form-control-sm" id="precioNewProd" name="precioNewProd" placeholder="S/.">
+            <label for="ipNewProd" class="col-sm-3 col-form-label col-form-label-sm">IP:</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control form-control-sm" id="ipNewProd" name="ipNewProd" placeholder="191.168.00.00">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="macNewProd" class="col-sm-3 col-form-label col-form-label-sm">MAC:</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control form-control-sm" id="macNewProd" name="macNewProd" placeholder="00:00:00:00:00">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="responNewProd" class="col-sm-3 col-form-label">Responsable:</label>
+            <div class="col-sm-9">
+              <select class="form-control form-control-sm" id="responNewProd" name="responNewProd">
+                <option value="">Elije a uno</option>
+								<?php $ctg = $con->query("SELECT * FROM empleado");
+										while ($row = $ctg->fetch_assoc()) {
+											echo "<option value='".$row['id_emp']."' ";
+											echo ">";
+											echo $row['nom_emp'];
+											echo "</option>";
+										}
+								?>
+              </select>
             </div>
           </div>
           <div class="form-group row">
@@ -49,8 +71,9 @@
             <div class="col-sm-9">
               <select class="form-control form-control-sm" id="estadoNewProd" name="estadoNewProd">
                 <option value="Disponible">Disponible</option>
-                <option value="Limpieza">Limpieza</option>
-                <option value="Ocupado">Ocupado</option>
+                <option value="Alquilado">Alquilado</option>
+                <option value="Prestado">Prestado</option>
+                <option value="Propio">Propio</option>
               </select>
             </div>
           </div>

@@ -1,12 +1,10 @@
 <?php
 	session_start();
 	require '../../../config/conexion.php';
-	$EmpleaEgreso = $_SESSION['loginUser']['id_emp'];
-	$fechaEgreso =  $_POST['fechNewEgreso'];
-	$describeEgreso = $_POST['descNewEgreso'];
-	$precioEgreso = $_POST['precNewEgreso'];
+	$describeCargo = $_POST['nomNewCargo'];
+	$detalleCargo = $_POST['detalleNewCargo'];
 
-	$gasto = $con->query("INSERT INTO egresos (id_emp,fecha_egreso,desc_egreso,precio_egreso) VALUES ('$EmpleaEgreso','$fechaEgreso','$describeEgreso','$precioEgreso')");
+	$gasto = $con->query("INSERT INTO cargo (nom_cargo,desc_cargo) VALUES ('$describeCargo','$detalleCargo')");
 
 	if ($gasto) {
 		echo json_encode(array('error' => false));

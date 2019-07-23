@@ -34,7 +34,7 @@
                 <h1 class="h3 mb-0 text-gray-800">Egresos</h1>
               </div>
               <div class="col-4 mt-md-0 text-right">
-                <button type="button" class="btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#modalRetiroCreate"><i class="fas fa-plus mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Nuevo Retiro</span></button>
+                <button type="button" class="btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#modalRetiroCreate"><i class="fas fa-plus mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Nuevo Cargo</span></button>
               </div>
             </div>
 
@@ -43,7 +43,7 @@
               <div class="col-sm-12">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-wallet mr-2"></i>Lista de Gastos</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-wallet mr-2"></i>Lista de Cargos</h6>
                   </div>
                   <div class="card-body">
                     <div id="tableRetiro"></div>
@@ -76,10 +76,9 @@
           data: "idgto=" + idgto,
           success:function(r){
             var datos= $.parseJSON(r);
-            $('#idEditEgreso').val(datos['idEgreso']);
-            $('#fechEditEgreso').val(datos['fechaEgreso']);
-            $('#descEditEgreso').val(datos['descEgreso']);
-            $('#precEditEgreso').val(datos['precioEgreso']);
+            $('#idEditCargo').val(datos['idCargo']);
+            $('#nomEditCargo').val(datos['nomCargo']);
+            $('#detEditCargo').val(datos['desCargo']);
           }
         })
         .done(function() {

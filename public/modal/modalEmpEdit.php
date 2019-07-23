@@ -26,29 +26,34 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="editTipoDocEmp" class="col-sm-3 col-form-label col-form-label-sm">Documento:</label>
-                <div class="col-sm-3">
+                <label for="editCuentaEmp" class="col-sm-3 col-form-label col-form-label-sm">Cuenta:</label>
+                <!-- <div class="col-sm-3">
                   <select class="form-control form-control-sm" id="editTipoDocEmp" name="editTipoDocEmp">
                     <option value="DNI" selected>DNI</option>
                     <option value="RUC">RUC</option>
                     <option value="PASAPORTE">PASAPORTE</option>
                     <option value="otro">Otros</option>
                   </select>
-                </div>
+                </div> -->
                 <div class="col-sm-6">
-                  <input type="text" class="form-control form-control-sm" id="editNumDocEmp" name="editNumDocEmp">
+                  <input type="text" class="form-control form-control-sm" id="editCuentaEmp" name="editCuentaEmp">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="editTelfEmp" class="col-sm-3 col-form-label col-form-label-sm">Teléfono:</label>
+                <label for="EditCargoEmp" class="col-sm-3 col-form-label col-form-label-sm">Cargo:</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control form-control-sm" id="editTelfEmp" name="editTelfEmp">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="editEmailEmp" class="col-sm-3 col-form-label col-form-label-sm">E-mail:</label>
-                <div class="col-sm-9">
-                  <input type="email" class="form-control form-control-sm" id="editEmailEmp" name="editEmailEmp">
+                  <!-- <input type="text" class="form-control form-control-sm" id="createTelfEmp" name="createTelfEmp" placeholder="Ingresa tu Celular"> -->
+                  <select class="form-control form-control-sm" id="EditCargoEmp" name="EditCargoEmp">
+                    <option value="">Elije producto</option>
+    								<?php $ctg = $con->query("SELECT * FROM cargo");
+    										while ($row = $ctg->fetch_assoc()) {
+    											echo "<option value='".$row['id_cargo']."' ";
+    											echo ">";
+    											echo $row['nom_cargo'];
+    											echo "</option>";
+    										}
+    								?>
+                  </select>
                 </div>
               </div>
               <div class="form-group row">

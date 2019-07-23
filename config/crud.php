@@ -12,13 +12,11 @@ class crud
 	$datos = array('idempphp'=>$ver[0],
 					'nomempphp'=>$ver[1],
 					'apempphp'=>$ver[2],
-					'tdocempphp'=>$ver[3],
-					'ndocempphp'=>$ver[4],
-					'fonempphp'=>$ver[5],
-					'emaempphp'=>$ver[6],
-					'userempphp'=>$ver[7],
-					'passempphp'=>$ver[8],
-					'estaempphp'=>$ver[9]);
+					'cuentaempphp'=>$ver[3],
+					'estaempphp'=>$ver[4],
+					'userempphp'=>$ver[5],
+					'passempphp'=>$ver[6],
+					'cargoempphp'=>$ver[7]);
 	return $datos;
 	}
   public function deleteEmple($idemp){
@@ -27,21 +25,19 @@ class crud
 		return $sql;
 	}
 
-  //------------------------------CRUD PARA GASTOS --------------------
-  public function ReadGastos($idgto){
+  //------------------------------CRUD PARA CARGOS --------------------
+  public function ReadCargos($idgto){
 		require 'conexion.php';
-		$sql = $con->query("SELECT * FROM egresos WHERE id_egreso= '$idgto' ");
+		$sql = $con->query("SELECT * FROM cargo WHERE id_cargo= '$idgto' ");
 		$ver = $sql->fetch_row();
-		$datos = array('idEgreso'=>$ver[0],
-						'idEmpEgreso'=>$ver[1],
-						'fechaEgreso'=>$ver[2],
-						'descEgreso'=>$ver[3],
-						'precioEgreso'=>$ver[4]);
+		$datos = array('idCargo'=>$ver[0],
+						'nomCargo'=>$ver[1],
+						'desCargo'=>$ver[2]);
 		return $datos;
 	}
-  public function DeleteGastos($idgto){
+  public function DeleteCargos($idgto){
 			require 'conexion.php';
-			$sql = $con->query("DELETE FROM egresos WHERE id_egreso = '$idgto' ");
+			$sql = $con->query("DELETE FROM cargo WHERE id_cargo = '$idgto' ");
 			return $sql;
 	}
   //------------------------- CRUD PARA PRODUCTO --------------------------

@@ -2,20 +2,18 @@
 	require '../../../config/conexion.php';
 	$nomEmpReg = $_POST['createNombEmp'];
 	$apeEmpReg = $_POST['createApeEmp'];
-	$tdocEmpReg = $_POST['createTipoDocEmp'];
-	$ndocEmpReg = $_POST['createNumDocEmp'];
-	$telfEmpReg = $_POST['createTelfEmp'];
-	$mailEmpReg = $_POST['createEmailEmp'];
-	$passEmpReg = $_POST['createPassEmp'];
-	$userEmpReg = $_POST['createUserEmp'];
-	$estaEmpReg = $_POST['createEstaEmp'];
+	$docEmpReg = $_POST['createCuentaEmp'];
+	$estEmpReg = $_POST['createEstaEmp'];
+	$useEmpReg = $_POST['createUserEmp'];
+	$pasEmpReg = $_POST['createPassEmp'];
+	$carEmpReg = $_POST['createCargoEmp'];
 
-	$val = $con->query("SELECT numdoc_emp FROM empleado WHERE numdoc_emp LIKE '$ndocEmpReg' ");
+	$val = $con->query("SELECT doc_emp FROM empleado WHERE doc_emp LIKE '$docEmpReg' ");
 	$emple = $val->fetch_row();
-	if ($emple[0]==$ndocEmpReg) {
+	if ($emple[0]==$docEmpReg) {
 		echo json_encode(array('error' => true));
 	}else{
-		$reg = $con->query("INSERT INTO empleado (nom_emp,ape_emp,tipodoc_emp,numdoc_emp,telf_emp,email_emp,user_emp,pass_emp,estado_emp) VALUES ('$nomEmpReg','$apeEmpReg','$tdocEmpReg','$ndocEmpReg','$telfEmpReg','$mailEmpReg','$userEmpReg','$passEmpReg','$estaEmpReg')");
+		$reg = $con->query("INSERT INTO empleado (nom_emp,ape_emp,doc_emp,estado_emp,user_emp,pass_emp,id_cargo) VALUES ('$nomEmpReg','$apeEmpReg','$docEmpReg','$estEmpReg','$useEmpReg','$pasEmpReg','$carEmpReg')");
 		if ($reg) {
 			echo json_encode(array('error' => false));
 		}else{

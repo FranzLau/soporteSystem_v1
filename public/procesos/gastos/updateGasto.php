@@ -1,12 +1,12 @@
 <?php
 	require '../../../config/conexion.php';
-	$formIdEgreso = $_POST['idEditEgreso'];
-	$formDescEgreso = $_POST['descEditEgreso'];
-	$formPrecioEgreso = $_POST['precEditEgreso'];
+	$formIdCargo = $_POST['idEditCargo'];
+	$formNomCargo = $_POST['nomEditCargo'];
+	$formDesCargo = $_POST['detEditCargo'];
 
-	$upd = $con->query("UPDATE egresos SET desc_egreso='$formDescEgreso',
-																			precio_egreso='$formPrecioEgreso'
-										WHERE id_egreso= '$formIdEgreso' ");
+	$upd = $con->query("UPDATE cargo SET nom_cargo='$formNomCargo',
+																			desc_cargo='$formDesCargo'
+										WHERE id_cargo= '$formIdCargo' ");
 	if ($upd) {
 		echo json_encode(array('error' => false));
 	}else{

@@ -25,7 +25,7 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="createTipoDocEmp" class="col-sm-3 col-form-label col-form-label-sm">Documento:</label>
+                <label for="createCuentaEmp" class="col-sm-3 col-form-label col-form-label-sm">Cuenta:</label>
                 <!--<div class="col-sm-3">
                   <select class="form-control form-control-sm" id="createTipoDocEmp" name="createTipoDocEmp">
                     <option value="DNI" selected>DNI</option>
@@ -35,16 +35,27 @@
                   </select>
                 </div>-->
                 <div class="col-sm-6">
-                  <input type="text" class="form-control form-control-sm" id="createNumDocEmp" name="createNumDocEmp" placeholder="N° del Documento">
+                  <input type="text" class="form-control form-control-sm" id="createCuentaEmp" name="createCuentaEmp" placeholder="Cuenta">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="createTelfEmp" class="col-sm-3 col-form-label col-form-label-sm">Cargo:</label>
+                <label for="createCargoEmp" class="col-sm-3 col-form-label col-form-label-sm">Cargo:</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control form-control-sm" id="createTelfEmp" name="createTelfEmp" placeholder="Ingresa tu Celular">
+                  <!-- <input type="text" class="form-control form-control-sm" id="createTelfEmp" name="createTelfEmp" placeholder="Ingresa tu Celular"> -->
+                  <select class="form-control form-control-sm" id="createCargoEmp" name="createCargoEmp">
+                    <option value="">Elije producto</option>
+    								<?php $ctg = $con->query("SELECT * FROM cargo");
+    										while ($row = $ctg->fetch_assoc()) {
+    											echo "<option value='".$row['id_cargo']."' ";
+    											echo ">";
+    											echo $row['nom_cargo'];
+    											echo "</option>";
+    										}
+    								?>
+                  </select>
                 </div>
               </div>
-              <div class="form-group row">
+              <!-- <div class="form-group row">
                 <label for="createEmailEmp" class="col-sm-3 col-form-label col-form-label-sm">Area:</label>
                 <div class="col-sm-9">
                   <input type="email" class="form-control form-control-sm" id="createEmailEmp" name="createEmailEmp" placeholder="tu-correo@ejemplo.com">
@@ -55,7 +66,7 @@
                 <div class="col-sm-9">
                   <input type="email" class="form-control form-control-sm" id="createEmailEmp" name="createEmailEmp" placeholder="tu-correo@ejemplo.com">
                 </div>
-              </div>
+              </div> -->
               <div class="form-group row" hidden>
                 <label for="createEstaEmp" class="col-sm-3 col-form-label col-form-label-sm">Estado:</label>
                 <div class="col-sm-9">
@@ -63,10 +74,11 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="createUserEmp" class="col-sm-3 col-form-label col-form-label-sm">Usuario:</label>
+                <label for="createUserEmp" class="col-sm-3 col-form-label col-form-label-sm">Niveles:</label>
                 <div class="col-sm-9">
                   <!-- <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm"> -->
                   <select class="form-control form-control-sm" id="createUserEmp" name="createUserEmp">
+                    <option value="Ninguno">Ninguno</option>
                     <option value="Usuario">Usuario</option>
                     <option value="Administrador">Administrador</option>
                   </select>

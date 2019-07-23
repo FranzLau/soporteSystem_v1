@@ -3,30 +3,44 @@
   require '../../config/conexion.php';
   require '../../config/data.php';
   $obj = new data();
-  $sql = $con->query("SELECT * FROM room");
+  $sql = $con->query("SELECT * FROM equipo");
  ?>
 <div class="table-responsive">
   <table class="table table-hover table-sm" id="tableProduc" width="100%" cellspacing="0">
     <thead>
-        <tr>
-          <th>ESTADO</th>
-          <th>NOMBRE</th>
-          <th>CATEGORIA</th>
-          <th>PRECIO</th>
-          <th>DETALLES</th>
-          <th class="text-center">ACCION</th>
-        </tr>
+      <tr>
+        <th>ESTADO</th>
+        <th>NOMBRE</th>
+        <th>CATEGORIA</th>
+        <th>SERIE</th>
+        <th>IP</th>
+        <th>MAC</th>
+        <th>RESPONSABLE</th>
+        <th class="text-center">ACCION</th>
+      </tr>
     </thead>
+    <tfoot>
+      <tr>
+        <th>ESTADO</th>
+        <th>NOMBRE</th>
+        <th>CATEGORIA</th>
+        <th>SERIE</th>
+        <th>IP</th>
+        <th>MAC</th>
+        <th>RESPONSABLE</th>
+        <th class="text-center">ACCION</th>
+      </tr>
+    </tfoot>
     <tbody>
         <?php while($mostrarprod = $sql->fetch_row()){ ?>
           <tr>
             <td>
               <?php
-              if ($mostrarprod[4]=="Disponible") {
+              if ($mostrarprod[5]=="Disponible") {
               ?>
               <a href="#" class="badge badge-outline-success"><i class="fas fa-door-open mr-2"></i>Disponible</a>
               <?php
-              }elseif ($mostrarprod[4]=="Limpieza") {
+            }elseif ($mostrarprod[5]=="Limpieza") {
               ?>
               <a href="#" class="badge badge-outline-info"><i class="fas fa-broom mr-2"></i>Limpieza</a>
               <?php
@@ -38,9 +52,12 @@
               ?>
             </td>
             <td><?php echo $mostrarprod[1] ?></td>
-            <td><?php echo $obj->nameCategory( $mostrarprod[5]) ?></td>
-            <td><?php echo $mostrarprod[3] ?></td>
+            <td><?php echo $obj->nameCategory( $mostrarprod[6]) ?></td>
+
             <td><?php echo $mostrarprod[2] ?></td>
+            <td><?php echo $mostrarprod[3] ?></td>
+            <td><?php echo $mostrarprod[4] ?></td>
+            <td><?php echo $mostrarprod[7] ?></td>
             <td class="text-center">
               <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#ModalUpdateProd" onclick="ReadProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
                 <?php

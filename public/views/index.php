@@ -27,29 +27,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <?php
-            $sql = $con->query("SELECT estado_caja FROM caja WHERE estado_caja='Abierta' ");
-            $result = $sql->fetch_row();
-            if ($result[0]=='Abierta') {
-          ?>
 
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-              <strong><i class="fas fa-exclamation-triangle mr-2"></i>Advertencia!</strong> Debes cerrar CAJA antes de cerrar sesión. <a href="box.php" class="alert-link">Click Aquí</a>.
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-          <?php  }else {  ?>
-
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong><i class="fas fa-thumbs-up mr-2"></i>Bienvenido!</strong> Debes aperturar CAJA para empezar con el uso del sistema.<a href="box.php" class="alert-link">Click Aquí</a>.
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-          <?php  }  ?>
 
 
           <!-- Page Heading -->
@@ -62,18 +40,14 @@
           <div class="row">
 
             <!-- Earnings (Monthly) Card Example -->
-            <?php
-            $sql = $con->query("SELECT COUNT(estado_room) FROM room WHERE estado_room='Disponible' ");
-            $result = $sql->fetch_row();
-            $ver = $result[0];
-            ?>
+
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Habit. Disponibles</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $ver; ?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">500</div>
                     </div>
                     <div class="col-auto">
                       <!-- <i class="fas fa-calendar fa-2x text-gray-300"></i> -->
@@ -85,18 +59,14 @@
             </div>
 
             <!-- Room OCUPADAS - Card Example -->
-            <?php
-            $sql = $con->query("SELECT COUNT(estado_room) FROM room WHERE estado_room='Ocupado' ");
-            $result = $sql->fetch_row();
-            $vero = $result[0];
-            ?>
+
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Habit. Ocupadas</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $vero; ?></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">600</div>
                     </div>
                     <div class="col-auto">
                       <!-- <i class="fas fa-comments fa-2x text-gray-300"></i> -->

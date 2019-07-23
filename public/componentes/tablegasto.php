@@ -1,6 +1,6 @@
 <?php
   require '../../config/conexion.php';
-  $sql = $con->query("SELECT * FROM egresos ");
+  $sql = $con->query("SELECT * FROM cargo ");
  ?>
 
 <div class="table-responsive">
@@ -8,20 +8,25 @@
     <thead>
       <tr>
         <th>ID</th>
-        <th>Fecha</th>
-        <th>Descripción</th>
-        <th>Precio</th>
+        <th>Descripcion</th>
+        <th>Detalles</th>
         <th class="text-center">Opciones</th>
       </tr>
     </thead>
-
+    <tfoot>
+      <tr>
+        <th>ID</th>
+        <th>Descripcion</th>
+        <th>Detalles</th>
+        <th class="text-center">Opciones</th>
+      </tr>
+    </tfoot>
     <tbody>
       <?php while($vergasto = $sql->fetch_row()){ ?>
         <tr>
           <td><?php echo $vergasto[0] ?></td>
+          <td><?php echo $vergasto[1] ?></td>
           <td><?php echo $vergasto[2] ?></td>
-          <td><?php echo $vergasto[3] ?></td>
-          <td><?php echo $vergasto[4] ?></td>
           <td class="text-center">
             <a href="#" class="mr-3 btn-link-edit" title="Editar" data-toggle="modal" data-target="#modalRetiroEditer" onclick="obtenDataEgreso('<?php echo $vergasto[0] ?>')"><i class="fas fa-pen"></i></a>
             <a href="#" class="btn-link-delete" title="Eliminar" onclick="deleteEgreso('<?php echo $vergasto[0] ?>')"><i class="fas fa-trash-alt"></i></a>

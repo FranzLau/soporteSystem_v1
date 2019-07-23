@@ -1,5 +1,7 @@
 <?php
     require '../../config/conexion.php';
+    require '../../config/data.php';
+    $obj = new data();
     $sql = $con->query("SELECT * FROM empleado ");
 ?>
   <!-- DataTales Example -->
@@ -13,26 +15,24 @@
           <thead>
               <tr>
                <th>ID</th>
-               <th>NOMBRE</th>
-               <th>N° Doc</th>
+               <th>NOMBRES</th>
+               <th>APELLIDOS</th>
+               <th>CUENTA</th>
                <th>CARGO</th>
-               <th>AREA</th>
-               <th>GERENCIA</th>
                <th class="text-center">ESTADO</th>
                <th class="text-center">ACCIONES</th>
               </tr>
           </thead>
           <tfoot>
             <tr>
-               <th>ID</th>
-               <th>NOMBRE</th>
-               <th>N° Doc</th>
-               <th>CARGO</th>
-               <th>AREA</th>
-               <th>GERENCIA</th>
-               <th class="text-center">ESTADO</th>
-               <th class="text-center">ACCIONES</th>
-             </tr>
+             <th>ID</th>
+             <th>NOMBRES</th>
+             <th>APELLIDOS</th>
+             <th>CUENTA</th>
+             <th>CARGO</th>
+             <th class="text-center">ESTADO</th>
+             <th class="text-center">ACCIONES</th>
+            </tr>
           </tfoot>
           <tbody>
              <?php
@@ -40,12 +40,11 @@
               ?>
               <tr>
                  <td><?php echo $mostrar[0] ?></td>
-                 <td><?php echo $mostrar[1]." ".$mostrar[2] ?></td>
+                 <td><?php echo $mostrar[1] ?></td>
+                 <td><?php echo $mostrar[2] ?></td>
                  <td><?php echo $mostrar[3] ?></td>
-                 <td><?php echo $mostrar[7] ?></td>
-                 <td><?php echo $mostrar[8] ?></td>
-                 <td><?php echo $mostrar[9] ?></td>
-                 
+                 <td><?php echo $obj->nameCargo( $mostrar[7]) ?></td>
+
                  <td class="text-center">
                    <?php
                    if ($mostrar[4]=="1") {

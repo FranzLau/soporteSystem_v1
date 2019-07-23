@@ -1,10 +1,10 @@
 jQuery(document).ready(function() {
   $('#btnCreateProd').click(function() {
-		vacios = validarFrmVacio('formCreateNewProd');
-		if(vacios > 0){
-			alertify.error("Debe llenar todos los campos!");
-			return false;
-		}
+		// vacios = validarFrmVacio('formCreateNewProd');
+		// if(vacios > 0){
+		// 	alertify.error("Debe llenar todos los campos!");
+		// 	return false;
+		// }
 		var datos=$('#formCreateNewProd').serialize();
 		$.ajax({
 			url: '../../public/procesos/producto/createProducto.php',

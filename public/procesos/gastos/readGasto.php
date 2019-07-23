@@ -3,6 +3,6 @@
 	require '../../../config/crud.php';
 
 	$obj = new crud();
-	echo json_encode($obj->ReadGastos($_POST['idgto']));
+	echo json_encode($obj->ReadCargos($_POST['idgto']));
 
  ?>
