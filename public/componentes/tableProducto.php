@@ -36,17 +36,21 @@
           <tr>
             <td>
               <?php
-              if ($mostrarprod[5]=="Disponible") {
+              if ($mostrarprod[5]=="Operativo") {
               ?>
-              <a href="#" class="badge badge-outline-success"><i class="fas fa-door-open mr-2"></i>Disponible</a>
+              <a href="#" class="badge badge-outline-success"><i class="fas fa-plug mr-2"></i>Operativo</a>
               <?php
-            }elseif ($mostrarprod[5]=="Limpieza") {
+            }elseif ($mostrarprod[5]=="Disponible") {
               ?>
-              <a href="#" class="badge badge-outline-info"><i class="fas fa-broom mr-2"></i>Limpieza</a>
+              <a href="#" class="badge badge-outline-info"><i class="fas fa-shopping-cart mr-2"></i>Disponible</a>
+              <?php
+            }elseif ($mostrarprod[5]=="Prestado") {
+              ?>
+              <a href="#" class="badge badge-outline-warning"><i class="fas fa-clock mr-2"></i>Prestado</a>
               <?php
               }else {
               ?>
-              <a href="#" class="badge badge-outline-danger"><i class="fas fa-door-closed mr-2"></i>Ocupado</a>
+              <a href="#" class="badge badge-outline-danger"><i class="fas fa-times-circle mr-2"></i>Malogrado</a>
               <?php
               }
               ?>
@@ -59,6 +63,7 @@
             <td><?php echo $mostrarprod[4] ?></td>
             <td><?php echo $mostrarprod[7] ?></td>
             <td class="text-center">
+              <a href="#" class="btn-link-eyes mr-3" title="Detalles"><i class="fas fa-eye"></i></a>
               <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#ModalUpdateProd" onclick="ReadProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
                 <?php
                   if ($_SESSION['loginUser']['user_emp'] == "Administrador"):

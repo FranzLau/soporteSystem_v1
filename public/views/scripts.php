@@ -26,7 +26,7 @@
 <script src="../../assets/js/select-client.js"></script>
 
 <script src="../../assets/js/empleadojs.js"></script>
-<script src="../../assets/js/productjs.js"></script>
+<script src="../../assets/js/productsjs.js"></script>
 <script src="../../assets/js/customers.js"></script>
 <script src="../../assets/js/categoryjs.js"></script>
 <script src="../../assets/js/egresojs.js"></script>

@@ -70,17 +70,17 @@
             <label for="estadoNewProd" class="col-sm-3 col-form-label col-form-label-sm">Estado</label>
             <div class="col-sm-9">
               <select class="form-control form-control-sm" id="estadoNewProd" name="estadoNewProd">
+                <option value="Operativo">Operativo</option>
                 <option value="Disponible">Disponible</option>
-                <option value="Alquilado">Alquilado</option>
                 <option value="Prestado">Prestado</option>
-                <option value="Propio">Propio</option>
+                <option value="Malogrado">Malogrado</option>
               </select>
             </div>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary btn-sm w-100" id="btnCreateProd"><i class="fas fa-save mr-2 fa-sm text-white-50"></i>Guardar</button>
+        <button type="button" class="btn btn-primary btn-sm" id="btnCreateProd"><i class="fas fa-save mr-2 fa-sm text-white-50"></i>Guardar</button>
       </div>
     </div>
   </div>
