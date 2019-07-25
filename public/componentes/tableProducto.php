@@ -9,69 +9,67 @@
   <table class="table table-hover table-sm" id="tableProduc" width="100%" cellspacing="0">
     <thead>
       <tr>
-        <th>ESTADO</th>
+        <th><i class="fas fa-star"></i></th>
         <th>NOMBRE</th>
-        <th>CATEGORIA</th>
+        <th>TIPO</th>
         <th>SERIE</th>
-        <th>IP</th>
-        <th>MAC</th>
+        <th>MARCA</th>
+        <th>MODELO</th>
         <th>RESPONSABLE</th>
+        <th>SEDE</th>
         <th class="text-center">ACCION</th>
       </tr>
     </thead>
     <tfoot>
       <tr>
-        <th>ESTADO</th>
+        <th><i class="fas fa-star"></i></th>
         <th>NOMBRE</th>
-        <th>CATEGORIA</th>
+        <th>TIPO</th>
         <th>SERIE</th>
-        <th>IP</th>
-        <th>MAC</th>
+        <th>MARCA</th>
+        <th>MODELO</th>
         <th>RESPONSABLE</th>
+        <th>SEDE</th>
         <th class="text-center">ACCION</th>
       </tr>
     </tfoot>
     <tbody>
         <?php while($mostrarprod = $sql->fetch_row()){ ?>
-          <tr>
-            <td>
+        <tr>
+          <td>
+            <?php
+            if ($mostrarprod[8]=="Operativo") {
+            ?>
+              <i class="fas fa-star" style="color:#1cc88a"></i>
+            <?php
+          }elseif ($mostrarprod[8]=="Prestado") {
+            ?>
+              <i class="fas fa-star" style="color:#f6c23e"></i>
+            <?php
+            }else {
+            ?>
+              <i class="fas fa-star" style="color:#e74a3b"></i>
+            <?php
+            }
+            ?>
+          </td>
+          <td><?php echo $mostrarprod[1] ?></td>
+          <td><?php echo $obj->nameCategory( $mostrarprod[9]) ?></td>
+          <td><?php echo $mostrarprod[2] ?></td>
+          <td><?php echo $mostrarprod[5] ?></td>
+          <td><?php echo $mostrarprod[6] ?></td>
+          <td><?php echo $obj->nombEmpleado( $mostrarprod[11]) ?></td>
+          <td><?php echo $mostrarprod[10] ?></td>
+          <td class="text-center">
+            <a href="#" class="btn-link-eyes mr-3" title="Detalles"><i class="fas fa-eye"></i></a>
+            <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#ModalUpdateProd" onclick="ReadProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
               <?php
-              if ($mostrarprod[5]=="Operativo") {
+                if ($_SESSION['loginUser']['user_emp'] == "Administrador"):
               ?>
-              <a href="#" class="badge badge-outline-success"><i class="fas fa-plug mr-2"></i>Operativo</a>
-              <?php
-            }elseif ($mostrarprod[5]=="Disponible") {
-              ?>
-              <a href="#" class="badge badge-outline-info"><i class="fas fa-shopping-cart mr-2"></i>Disponible</a>
-              <?php
-            }elseif ($mostrarprod[5]=="Prestado") {
-              ?>
-              <a href="#" class="badge badge-outline-warning"><i class="fas fa-clock mr-2"></i>Prestado</a>
-              <?php
-              }else {
-              ?>
-              <a href="#" class="badge badge-outline-danger"><i class="fas fa-times-circle mr-2"></i>Malogrado</a>
-              <?php
-              }
-              ?>
+            <a href="#" class="btn-link-delete" title="Eliminar" onclick="deleteProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-trash-alt"></i></a>
+              <?php endif; ?>
             </td>
-            <td><?php echo $mostrarprod[1] ?></td>
-            <td><?php echo $obj->nameCategory( $mostrarprod[6]) ?></td>
-
-            <td><?php echo $mostrarprod[2] ?></td>
-            <td><?php echo $mostrarprod[3] ?></td>
-            <td><?php echo $mostrarprod[4] ?></td>
-            <td><?php echo $mostrarprod[7] ?></td>
-            <td class="text-center">
-              <a href="#" class="btn-link-eyes mr-3" title="Detalles"><i class="fas fa-eye"></i></a>
-              <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#ModalUpdateProd" onclick="ReadProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
-                <?php
-                  if ($_SESSION['loginUser']['user_emp'] == "Administrador"):
-                ?>
-              <a href="#" class="btn-link-delete" title="Eliminar" onclick="deleteProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-trash-alt"></i></a>
-                <?php endif; ?>
-              </td>
-           </tr>
+         </tr>
          <?php } ?>
       </tbody>
   </table>

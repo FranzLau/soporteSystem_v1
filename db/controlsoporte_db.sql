@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-07-2019 a las 06:29:25
+-- Tiempo de generación: 25-07-2019 a las 07:37:16
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -100,8 +100,8 @@ CREATE TABLE `empleado` (
 --
 
 INSERT INTO `empleado` (`id_emp`, `nom_emp`, `ape_emp`, `doc_emp`, `estado_emp`, `user_emp`, `pass_emp`, `id_cargo`, `id_area`, `id_gerencia`, `id_sede`) VALUES
-(2, 'Franz Lau', 'Cruz Ucharico', '70209626', 1, 'Administrador', 'admin', 1, 1, 1, 1),
-(3, 'Daniel Jose', 'Ticona chura', 'dticona', 1, 'Usuario', '', 1, 0, 0, 0);
+(2, 'Franz Lau', 'Cruz Ucharico', 'predes', 1, 'Administrador', 'admin', 1, 1, 1, 1),
+(3, 'Daniel Jose', 'Ticona chura', 'pinformatica2', 1, 'Usuario', '', 1, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -115,10 +115,22 @@ CREATE TABLE `equipo` (
   `serie_equipo` varchar(20) NOT NULL,
   `ip_equipo` varchar(15) NOT NULL,
   `mac_equipo` varchar(20) NOT NULL,
+  `marca_equipo` varchar(20) NOT NULL,
+  `modelo_equipo` varchar(50) NOT NULL,
+  `af_equipo` varchar(20) NOT NULL,
   `estado_equipo` varchar(15) NOT NULL,
   `id_categoria` int(100) NOT NULL,
+  `id_sede` int(100) NOT NULL,
   `id_emp` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `equipo`
+--
+
+INSERT INTO `equipo` (`id_equipo`, `nom_equipo`, `serie_equipo`, `ip_equipo`, `mac_equipo`, `marca_equipo`, `modelo_equipo`, `af_equipo`, `estado_equipo`, `id_categoria`, `id_sede`, `id_emp`) VALUES
+(1, 'ELS0331', '', '191.168.6.72', '', '', '', '', 'Disponible', 2, 0, 2),
+(2, 'ELS0080', '', '', '', 'HP', '', '', 'Operativo', 2, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -173,6 +185,12 @@ ALTER TABLE `empleado`
   ADD PRIMARY KEY (`id_emp`);
 
 --
+-- Indices de la tabla `equipo`
+--
+ALTER TABLE `equipo`
+  ADD PRIMARY KEY (`id_equipo`);
+
+--
 -- Indices de la tabla `gerencia`
 --
 ALTER TABLE `gerencia`
@@ -211,6 +229,12 @@ ALTER TABLE `categoria`
 --
 ALTER TABLE `empleado`
   MODIFY `id_emp` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `equipo`
+--
+ALTER TABLE `equipo`
+  MODIFY `id_equipo` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `gerencia`

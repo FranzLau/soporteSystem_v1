@@ -46,7 +46,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Habit. Disponibles</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Impresoras</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">500</div>
                     </div>
                     <div class="col-auto">
@@ -65,7 +65,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Habit. Ocupadas</div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Anexos</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">600</div>
                     </div>
                     <div class="col-auto">
@@ -83,7 +83,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Reservas</div>
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Alquilados</div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                           <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
@@ -111,7 +111,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Monto Diario</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">propios</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
                     </div>
                     <div class="col-auto">

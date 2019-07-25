@@ -94,12 +94,10 @@
             </form>
           </div>
         </div>
-        <hr>
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <button type="button" class="btn btn-primary btn-sm w-100" id="btnCreateEmp"><i class="fas fa-save mr-2 fa-sm text-white-50"></i>Guardar</button>
-          </div>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class="fas fa-times mr-2 fa-sm text-white-50"></i>Cancelar</button>
+        <button type="button" class="btn btn-primary btn-sm" id="btnCreateEmp"><i class="fas fa-save mr-2 fa-sm text-white-50"></i>Guardar</button>
       </div>
     </div>
   </div>

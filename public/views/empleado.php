@@ -30,12 +30,13 @@
 
             <!-- Page Heading -->
             <div class="row">
-              <div class="col-8 text-left d-flex">
+              <div class="col-6 text-left d-flex">
                 <!-- <h4 class="page-title my-auto">Empleados</h4> -->
                 <h1 class="h3 mb-0 text-gray-800">Empleados</h1>
               </div>
-              <div class="col-4 mt-md-0 text-right">
+              <div class="col-6 mt-md-0 text-right">
                 <button type="button" class="btn btn-primary shadow-sm btn-sm" data-toggle="modal" data-target="#ModalNuevoEmp"><i class="fas fa-plus mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Nuevo Empleado</span></button>
+                <a href="cargo.php" class="btn btn-primary shadow-sm btn-sm"><i class="fas fa-graduation-cap mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Sección Cargos</span></a>
               </div>
             </div>
 

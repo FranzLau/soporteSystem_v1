@@ -29,11 +29,12 @@
 
             <!-- Page Heading -->
             <div class="row">
-              <div class="col-8 text-left d-flex">
+              <div class="col-6 text-left d-flex">
                 <!-- <h4 class="page-title my-auto">EGRESOS</h4> -->
                 <h1 class="h3 mb-0 text-gray-800">Egresos</h1>
               </div>
-              <div class="col-4 mt-md-0 text-right">
+              <div class="col-6 mt-md-0 text-right">
+                <a href="empleado.php" class="btn btn-sm btn-primary shadow-sm"><i class="fas fa-arrow-left mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Atras</span></a>
                 <button type="button" class="btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#modalRetiroCreate"><i class="fas fa-plus mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Nuevo Cargo</span></button>
               </div>
             </div>
