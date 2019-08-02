@@ -9,6 +9,7 @@
 	$afNewProd = $_POST['afNewProd'];
 	$estadNewProd = $_POST['estadoNewProd'];
 	$categNewProd = $_POST['catgNewProd'];
+	$presentNewProd = $_POST['presentNewProd'];
 	$sedeNewProd = $_POST['sedeNewProd'];
 	$empleNewProd = $_POST['responNewProd'];
 
@@ -17,7 +18,31 @@
 	if ($produ[0]==$nombNewProd) {
 		echo 0;
 	}else{
-		$res = $con->query("INSERT INTO equipo (nom_equipo,serie_equipo,ip_equipo,mac_equipo,marca_equipo,modelo_equipo,af_equipo,estado_equipo,id_categoria,id_sede,id_emp) VALUES ('$nombNewProd','$serieNewProd','$ipNewProd','$macNewProd','$marcNewProd','$modeNewProd','$afNewProd','$estadNewProd','$categNewProd','$sedeNewProd','$empleNewProd')");
+<<<<<<< HEAD
+		$res = $con->query("INSERT INTO equipo (nom_equipo,
+												serie_equipo,
+												ip_equipo,
+												mac_equipo,
+												marca_equipo,
+												modelo_equipo,
+												af_equipo,
+												estado_equipo,
+												id_categoria,
+												id_presentacion,
+												id_sede,
+												id_emp) 
+									VALUES ('$nombNewProd',
+											'$serieNewProd',
+											'$ipNewProd',
+											'$macNewProd',
+											'$marcNewProd',
+											'$modeNewProd',
+											'$afNewProd',
+											'$estadNewProd',
+											'$categNewProd',
+											'$presentNewProd',
+											'$sedeNewProd',
+											'$empleNewProd')");
 		if ($res) {
 			echo json_encode(array('error' => false));
 		}else{

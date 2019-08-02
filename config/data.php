@@ -45,6 +45,12 @@ class data
 		$result = $sql->fetch_row();
 		return $result[0];
 	}
+	public function namePresentation($idprest){
+		require 'conexion.php';
+		$sql = $con->query("SELECT nom_presentacion FROM presentacion WHERE id_presentacion = '$idprest' ");
+		$result = $sql->fetch_row();
+		return $result[0];
+	}
   public function nameCargo($idcarg){
 		require 'conexion.php';
 		$sql = $con->query("SELECT nom_cargo FROM cargo WHERE id_cargo = '$idcarg' ");

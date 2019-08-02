@@ -1,5 +1,6 @@
 <!-- Modal -->
-<div class="modal fade" id="ModalNewProd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+<div class="modal fade" id="ModalNewProd" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -14,21 +15,21 @@
             <div class="col-sm-6">
               <p class="font-weight-bold"><i class="fas fa-user-edit mr-2"></i>Datos Básicos</p>
               <div class="form-group row mt-2">
-                <label for="nombNewProd" class="col-sm-4 col-form-label col-form-label-sm">Nombre:</label>
+                <label for="nombNewProd" class="col-sm-4 col-form-label col-form-label-sm">Equipo:</label>
                 <div class="col-sm-8">
                   <input type="text" class="form-control form-control-sm" id="nombNewProd" name="nombNewProd" placeholder="Ingrese el nombre...">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="catgNewProd" class="col-sm-4 col-form-label col-form-label-sm">Tipo:</label>
+                <label for="presentNewProd" class="col-sm-4 col-form-label col-form-label-sm">Tipo:</label>
                 <div class="col-sm-8">
-                  <select class="form-control form-control-sm" id="catgNewProd" name="catgNewProd">
-                    <option value="">Elije producto</option>
-    								<?php $ctg = $con->query("SELECT * FROM categoria");
+                  <select class="form-control form-control-sm" id="presentNewProd" name="presentNewProd">
+                    <option value="">Elije tipo equipo</option>
+    								<?php $ctg = $con->query("SELECT * FROM presentacion");
     										while ($row = $ctg->fetch_assoc()) {
-    											echo "<option value='".$row['id_categoria']."' ";
+    											echo "<option value='".$row['id_presentacion']."' ";
     											echo ">";
-    											echo $row['nom_categoria'];
+    											echo $row['nom_presentacion'];
     											echo "</option>";
     										}
     								?>
@@ -103,6 +104,22 @@
                 <label for="afNewProd" class="col-sm-4 col-form-label col-form-label-sm">AF:</label>
                 <div class="col-sm-8">
                   <input type="text" class="form-control form-control-sm" id="afNewProd" name="afNewProd">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="catgNewProd" class="col-sm-4 col-form-label col-form-label-sm">Categoria:</label>
+                <div class="col-sm-8">
+                  <select class="form-control form-control-sm" id="catgNewProd" name="catgNewProd">
+                    <option value="">Elije producto</option>
+    								<?php $ctg = $con->query("SELECT * FROM categoria");
+    										while ($row = $ctg->fetch_assoc()) {
+    											echo "<option value='".$row['id_categoria']."' ";
+    											echo ">";
+    											echo $row['nom_categoria'];
+    											echo "</option>";
+    										}
+    								?>
+                  </select>
                 </div>
               </div>
               <div class="form-group row">

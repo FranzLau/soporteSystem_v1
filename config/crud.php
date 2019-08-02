@@ -43,19 +43,26 @@ class crud
   //------------------------- CRUD PARA PRODUCTO --------------------------
   public function readDateProd($idprod){
 		require 'conexion.php';
-		$sql = $con->query("SELECT * FROM room WHERE id_room = '$idprod' ");
+		$sql = $con->query("SELECT * FROM equipo WHERE id_equipo = '$idprod' ");
 		$datoProd = $sql->fetch_row();
 		$datos = array('ProdId' => $datoProd[0],
 						'ProdNomb'=>$datoProd[1],
-						'ProdDetalle'=>$datoProd[2],
-						'ProdPrecio'=>$datoProd[3],
-						'ProdEstado'=>$datoProd[4],
-						'ProdCategory'=>$datoProd[5]);
+						'ProdSerie'=>$datoProd[2],
+						'ProdIP'=>$datoProd[3],
+						'ProdMac'=>$datoProd[4],
+						'ProdMarca'=>$datoProd[5],
+						'ProdModelo'=>$datoProd[6],
+						'ProdAf'=>$datoProd[7],
+						'ProdEstado'=>$datoProd[8],
+						'ProdIDcateg'=>$datoProd[9],
+						'ProdIDpresent'=>$datoProd[10],
+						'ProdIDsede'=>$datoProd[11],
+						'ProdIDemp'=>$datoProd[12]);
 		return $datos;
 	}
   public function deleteProducto($idprod){
 		require 'conexion.php';
-		$sql = $con->query("DELETE FROM room WHERE id_room = '$idprod' ");
+		$sql = $con->query("DELETE FROM equipo WHERE id_equipo = '$idprod' ");
 		return $sql;
 	}
   //------------------------- CRUD PARA PROVEEDOR -----------------------
@@ -113,6 +120,24 @@ class crud
   public function deleteCategory($idcateg){
 		require 'conexion.php';
 		$sql = $con->query("DELETE FROM categoria WHERE id_categoria = '$idcateg' ");
+		return $sql;
+	}
+
+	//------------------------ PARA PRESNTATION SOPORTE CONTROL ------------------------------
+
+
+	public function readDatePresent($idpret){
+		require 'conexion.php';
+		$sql = $con->query("SELECT * FROM presentacion WHERE id_presentacion = '$idpret' ");
+		$datePrest = $sql->fetch_row();
+		$datos = array('idPresent' => $datePrest[0],
+						'nomPresent'=>$datePrest[1],
+						'desPresent'=>$datePrest[2]);
+		return $datos;
+	}
+  public function deletePresentation($idpret){
+		require 'conexion.php';
+		$sql = $con->query("DELETE FROM presentacion WHERE id_presentacion = '$idpret' ");
 		return $sql;
 	}
   //------------------------ PARA CAJA CRUD ------------------------------

@@ -1,0 +1,23 @@
+/* .btn-user {
+  border-radius: 10rem;
+  padding: .75rem 1rem;
+  font-size: .8rem;
+} */
+.bg-login {
+  background: url('../img/login_1.jpg')!important;
+  background-size: cover!important;
+  background-attachment: fixed!important;
+  margin: 0!important;
+}
+.container-lg {
+  width: 100%!important;
+  height: 100vh!important;
+}
+.container-lg .form-lg {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 -25px 37.7px 11.3px rgba(8, 143, 220, 0.07);
+}

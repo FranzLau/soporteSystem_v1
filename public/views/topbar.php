@@ -56,11 +56,11 @@
 
     <!-- Nav Item - PDF manual -->
     <li class="nav-item mx-1">
-      <a href="configuration.php" class="nav-link">
-        <i class="fas fa-cog"></i>
+      <a href="empleado.php" class="nav-link">
+        <i class="fas fa-user-cog"></i>
       </a>
     </li>
-    
+
 
     <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -72,13 +72,13 @@
       </a>
       <!-- Dropdown - User Information -->
       <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="profile.php">
+        <!-- <a class="dropdown-item" href="profile.php">
           <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
           Mi perfil
-        </a>
+        </a> -->
         <a class="dropdown-item" href="#">
           <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-          Settings
+          Configuración
         </a>
         <a class="dropdown-item" href="basic.php">
           <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>

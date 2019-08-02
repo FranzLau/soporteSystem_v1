@@ -14,9 +14,9 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.php">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Panel Principal</span></a>
+        <a class="nav-link" href="products.php">
+          <i class="fas fa-fw fa-desktop"></i>
+          <span>Equipos</span></a>
       </li>
 
       <!-- Divider -->
@@ -38,13 +38,13 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Soporte:</h6>
-            <a class="collapse-item" href="products.php"><i class="fas fa-desktop mr-2"></i>Equipos</a>
-            <a class="collapse-item" href="#"><i class="fas fa-print mr-2"></i>Impresoras</a>
-            <a class="collapse-item" href="#"><i class="fas fa-phone-volume mr-2"></i>Anexos</a>
+            <h6 class="collapse-header">Almacen:</h6>
+            <a class="collapse-item" href="#"><i class="fas fa-desktop mr-2"></i>Equipos</a>
             <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Mantenimiento:</h6>
-            <a class="collapse-item" href="configuration.php"><i class="fas fa-cog mr-2"></i>Categoria</a>
+            <h6 class="collapse-header">Seguimiento:</h6>
+            <a class="collapse-item" href="#"><i class="fas fa-truck-loading mr-2"></i>Movimientos</a>
+            <a class="collapse-item" href="#"><i class="fas fa-people-carry mr-2"></i>Prestados</a>
+            <a class="collapse-item" href="#"><i class="fas fa-video mr-2"></i>Polycom</a>
           </div>
         </div>
       </li>
@@ -57,12 +57,8 @@
           <span>Incidencias</span></a>
       </li>
 
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="empleado.php">
-          <i class="fab fa-fw fa-black-tie"></i>
-          <span>Personal</span></a>
-      </li>
+
+
 
 
       <!-- Nav Item - Pages Collapse Menu -->

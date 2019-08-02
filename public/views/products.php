@@ -32,11 +32,13 @@
             <!-- Page Heading -->
 
             <div class="row">
-              <div class="col-8 text-left">
+              <div class="col-6 text-left">
                 <h1 class="h3 mb-0 text-gray-800">Equipos</h1>
               </div>
-              <div class="col-4 text-right">
-                <button type="button" class="btn btn-sm btn-primary mr-2" data-toggle="modal" data-target="#ModalNewProd"><i class="fas fa-plus mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Nuevo Equipo</span></button>
+              <div class="col-6 text-right">
+                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ModalNewProd"><i class="fas fa-plus mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Nuevo Equipo</span></button>
+                <a href="present.php" class="btn btn-primary shadow-sm btn-sm"><i class="fas fa-laptop mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Tipo Equipo</span></a>
+                <a href="configuration.php" class="btn btn-primary shadow-sm btn-sm"><i class="fas fa-tag mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Categorias</span></a>
               </div>
             </div>
 
@@ -80,10 +82,17 @@
             var datos= $.parseJSON(r);
             $('#idProdEdit').val(datos['ProdId']);
             $('#nomEditProd').val(datos['ProdNomb']);
-            $('#precioEditProd').val(datos['ProdPrecio']);
-            $('#detalleEditProd').val(datos['ProdDetalle']);
+            $('#serieEditProd').val(datos['ProdSerie']);
+            $('#ipEditProd').val(datos['ProdIP']);
+            $('#macEditProd').val(datos['ProdMac']);
+            $('#marcaEditProd').val(datos['ProdMarca']);
+            $('#modeloEditProd').val(datos['ProdModelo']);
+            $('#afEditProd').val(datos['ProdAf']);
             $('#estadoEditProd').val(datos['ProdEstado']);
-            $('#catgEditProd').val(datos['ProdCategory']);
+            $('#catgEditProd').val(datos['ProdIDcateg']);
+            $('#presentEditProd').val(datos['ProdIDpresent']);
+            $('#sedeEditProd').val(datos['ProdIDsede']);
+            $('#responEditProd').val(datos['ProdIDemp']);
           }
         })
         .done(function(r) {
