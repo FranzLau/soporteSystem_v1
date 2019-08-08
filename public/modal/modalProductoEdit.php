@@ -14,7 +14,7 @@
 
           <div class="row">
             <div class="col-sm-6">
-              <p class="font-weight-bold"><i class="fas fa-user-edit mr-2"></i>Datos Básicos</p>
+              <!-- <p class="font-weight-bold"><i class="fas fa-user-edit mr-2"></i>Datos Básicos</p> -->
               <div class="form-group row">
                 <label for="nomEditProd" class="col-sm-4 col-form-label col-form-label-sm">Nombre:</label>
                 <div class="col-sm-8">
@@ -53,11 +53,11 @@
                 <label for="sedeEditProd" class="col-sm-4 col-form-label col-form-label-sm">Sede</label>
                 <div class="col-sm-8">
                   <select class="form-control form-control-sm" id="sedeEditProd" name="sedeEditProd">
-                    <option value="1">S.E. 28 de Julio</option>
-                    <option value="2">S.E. Leguia</option>
-                    <option value="3">S.E. Para</option>
-                    <option value="4">Moquegua</option>
-                    <option value="5">Ilo</option>
+                    <option value="S.E. 28 de Julio">S.E. 28 de Julio</option>
+                    <option value="S.E. Leguia">S.E. Leguia</option>
+                    <option value="S.E. Para">S.E. Para</option>
+                    <option value="Moquegua">Moquegua</option>
+                    <option value="Ilo">Ilo</option>
                   </select>
                 </div>
               </div>
@@ -79,12 +79,20 @@
                   </select>
                 </div>
               </div>
-
+              <div class="form-group row">
+                <label for="estadoEditProd" class="col-sm-4 col-form-label col-form-label-sm">Estado</label>
+                <div class="col-sm-8">
+                  <select class="form-control form-control-sm" id="estadoEditProd" name="estadoEditProd">
+                    <option value="Operativo">Operativo</option>
+                    <option value="Prestado">Prestado</option>
+                    <option value="Inoperativo">Inoperativo</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            
 
             <div class="col-sm-6">
-              <p class="font-weight-bold"><i class="fas fa-user-cog mr-2"></i>Datos Técnicos</p>
+              <!-- <p class="font-weight-bold"><i class="fas fa-user-cog mr-2"></i>Datos Técnicos</p> -->
               <div class="form-group row mt-2">
                 <label for="serieEditProd" class="col-sm-4 col-form-label col-form-label-sm">Serie:</label>
                 <div class="col-sm-8">
@@ -126,13 +134,9 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="estadoEditProd" class="col-sm-4 col-form-label col-form-label-sm">Estado</label>
+                <label for="obsEditProd" class="col-sm-4 col-form-label col-form-label-sm">Observación:</label>
                 <div class="col-sm-8">
-                  <select class="form-control form-control-sm" id="estadoEditProd" name="estadoEditProd">
-                    <option value="Operativo">Operativo</option>
-                    <option value="Prestado">Prestado</option>
-                    <option value="Inoperativo">Inoperativo</option>
-                  </select>
+                  <textarea class="form-control form-control-sm" id="obsEditProd" name="obsEditProd" rows="3"></textarea>
                 </div>
               </div>
             </div>

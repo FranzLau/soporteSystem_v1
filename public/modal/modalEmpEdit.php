@@ -26,23 +26,8 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="editCuentaEmp" class="col-sm-3 col-form-label col-form-label-sm">Cuenta:</label>
-                <!-- <div class="col-sm-3">
-                  <select class="form-control form-control-sm" id="editTipoDocEmp" name="editTipoDocEmp">
-                    <option value="DNI" selected>DNI</option>
-                    <option value="RUC">RUC</option>
-                    <option value="PASAPORTE">PASAPORTE</option>
-                    <option value="otro">Otros</option>
-                  </select>
-                </div> -->
-                <div class="col-sm-6">
-                  <input type="text" class="form-control form-control-sm" id="editCuentaEmp" name="editCuentaEmp">
-                </div>
-              </div>
-              <div class="form-group row">
                 <label for="EditCargoEmp" class="col-sm-3 col-form-label col-form-label-sm">Cargo:</label>
                 <div class="col-sm-9">
-                  <!-- <input type="text" class="form-control form-control-sm" id="createTelfEmp" name="createTelfEmp" placeholder="Ingresa tu Celular"> -->
                   <select class="form-control form-control-sm" id="EditCargoEmp" name="EditCargoEmp">
                     <option value="">Elije producto</option>
     								<?php $ctg = $con->query("SELECT * FROM cargo");
@@ -59,39 +44,18 @@
               <div class="form-group row">
                 <label for="editEstaEmp" class="col-sm-3 col-form-label col-form-label-sm">Estado:</label>
                 <div class="col-sm-9">
-
                   <select class="form-control form-control-sm" id="editEstaEmp" name="editEstaEmp">
                     <option value="1">Activo</option>
-                    <option value="2">Inactivo</option>
+                    <option value="0">Inactivo</option>
                   </select>
-                </div>
-              </div>
-              <div class="form-group row" hidden>
-                <label for="editUserEmp" class="col-sm-3 col-form-label col-form-label-sm">Usuario:</label>
-                <div class="col-sm-9">
-                  <!-- <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm"> -->
-                  <select class="form-control form-control-sm" id="editUserEmp" name="editUserEmp">
-                    <option value="Usuario">Usuario</option>
-                    <option value="Administrador">Administrador</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row" hidden>
-                <label for="editPassEmp" class="col-sm-3 col-form-label col-form-label-sm">Password:</label>
-                <div class="col-sm-9">
-                  <input type="text" aria-describedby="emailHelp" class="form-control form-control-sm" id="editPassEmp" name="editPassEmp" placeholder="Ingresa una contraseña">
-                  <small id="emailHelp" class="form-text text-muted">* Solo para quien use el Sistema.</small>
                 </div>
               </div>
             </form>
           </div>
         </div>
-        <hr>
-        <div class="row">
-          <div class="col-sm-12">
-            <button type="button" class="btn w-100 btn-warning btn-sm" id="btnUpdateEmp"><i class="fas fa-edit mr-2 fa-sm text-white-50"></i>Editar</button>
-          </div>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning btn-sm" id="btnUpdateEmp"><i class="fas fa-edit mr-2 fa-sm text-white-50"></i>Actualizar</button>
       </div>
     </div>
   </div>

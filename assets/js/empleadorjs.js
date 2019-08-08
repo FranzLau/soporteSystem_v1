@@ -1,6 +1,11 @@
 jQuery(document).ready(function() {
   //CREAR EMPLEADO
   $('#btnCreateEmp').click(function() {
+    vacios = validarFrmVacio('formCreateEmp');
+		if(vacios > 0){
+			alertify.error("Complete los campos");
+		  return false;
+		}
 		var datos=$('#formCreateEmp').serialize();
 
 		$.ajax({
@@ -13,7 +18,9 @@ jQuery(document).ready(function() {
 			}
 		})
 		.done(function(r) {
-			if (!r.error) {
+      if (r==0) {
+				alertify.error("Registro ya existe!");
+      }else if (!r.error) {
 				$('#tableEmp').load('../componentes/tableemp.php');
 				$('#formCreateEmp')[0].reset();
 				alertify.success("Agregado con ÉXITO");

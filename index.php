@@ -92,17 +92,7 @@ if(isset($_SESSION['loginUser'])){
                   </form>
                   <button class="btn btn-info-melody w-100" id="btnlg"><i class="fas fa-sign-in-alt mr-2"></i> Ingresar</button>
 
-                  <?php
-                    require 'config/conexion.php';
-                    $sql = $con->query("SELECT * FROM empleado WHERE user_emp= 'Administrador' ");
-                    $validar =0;
-                    if ($result=$sql->fetch_row()>0){
-                       $validar = 1;
-                     }
-                     if (!$validar):
-                  ?>
-                    <p><a href="register.php">Registrate Aquí</a></p>
-                  <?php endif; ?>
+                  
                 </div>
               </div>
 
@@ -125,7 +115,7 @@ if(isset($_SESSION['loginUser'])){
  <script src="assets/js/sb-admin-2.min.js"></script>
 
  <script src="assets/alertify/alertify.js"></script>
- <script src="assets/js/loginuser.js"></script>
+ <script src="assets/js/lguser.js"></script>
 
 </body>
 </html>

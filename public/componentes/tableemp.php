@@ -17,7 +17,6 @@
                <th>ID</th>
                <th>NOMBRES</th>
                <th>APELLIDOS</th>
-               <th>CUENTA</th>
                <th>CARGO</th>
                <th class="text-center">ESTADO</th>
                <th class="text-center">ACCIONES</th>
@@ -28,7 +27,6 @@
              <th>ID</th>
              <th>NOMBRES</th>
              <th>APELLIDOS</th>
-             <th>CUENTA</th>
              <th>CARGO</th>
              <th class="text-center">ESTADO</th>
              <th class="text-center">ACCIONES</th>
@@ -42,12 +40,11 @@
                  <td><?php echo $mostrar[0] ?></td>
                  <td><?php echo $mostrar[1] ?></td>
                  <td><?php echo $mostrar[2] ?></td>
-                 <td><?php echo $mostrar[3] ?></td>
-                 <td><?php echo $obj->nameCargo( $mostrar[7]) ?></td>
+                 <td><?php echo $obj->nameCargo( $mostrar[4]) ?></td>
 
                  <td class="text-center">
                    <?php
-                   if ($mostrar[4]=="1") {
+                   if ($mostrar[3]=="1") {
                    ?>
                      <div class="badge badge-pill badge-outline-success">
                        <i class="fas fa-user mr-2"></i> Activo

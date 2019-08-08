@@ -10,7 +10,7 @@
 
   </head>
   <body id="page-top">
-    <?php include('../modal/modalEmpCreate.php'); ?>
+
     <?php include('../modal/modalEmpEdit.php'); ?>
 
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
@@ -34,19 +34,100 @@
                 <!-- <h4 class="page-title my-auto">Empleados</h4> -->
                 <h1 class="h3 mb-0 text-gray-800">Empleados</h1>
               </div>
-              <div class="col-6 mt-md-0 text-right">
-                <button type="button" class="btn btn-primary shadow-sm btn-sm" data-toggle="modal" data-target="#ModalNuevoEmp"><i class="fas fa-plus mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Nuevo Empleado</span></button>
-                <a href="cargo.php" class="btn btn-primary shadow-sm btn-sm"><i class="fas fa-graduation-cap mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Sección Cargos</span></a>
+              <div class="col-6 mt-md-0">
+                <!-- <button type="button" class="btn btn-primary shadow-sm btn-sm" data-toggle="modal" data-target="#ModalNuevoEmp"><i class="fas fa-plus mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Nuevo Empleado</span></button> -->
+                <!--
+                <a href="cargo.php" class="btn btn-primary shadow-sm btn-sm"><i class="fas fa-graduation-cap mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Sección Cargos</span></a> -->
+                <ul class="nav nav-pills nav-pills-primary justify-content-end" id="pills-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fas fa-plus mr-2 fa-sm"></i>Registrar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fas fa-list mr-2 fa-sm"></i>Listado</a>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <!-- Content Row -->
+
+            <!-- Page Heading -->
 
             <div class="row mt-3">
               <div class="col-sm-12">
-                <div id="tableEmp"></div>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="card shadow">
+                      <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user mr-2"></i>Registrar Empleados</h6>
+                        <div class="no-arrow">
+                          <a href="cargo.php"><i class="fas fa-graduation-cap fa-sm fa-fw text-gray-400"></i></a>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <form id="formCreateEmp">
+                              <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                  <label for="createNombEmp" class="col-form-label col-form-label-sm">Nombres:</label>
+                                  <input type="text" class="form-control form-control-sm" id="createNombEmp" name="createNombEmp" placeholder="Nombres">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                  <label for="createApeEmp" class="col-form-label col-form-label-sm">Apellidos:</label>
+                                  <input type="text" class="form-control form-control-sm" id="createApeEmp" name="createApeEmp" placeholder="Apellidos">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="createCargoEmp" class="col-form-label col-form-label-sm">Cargo:</label>
+                                <select class="form-control" id="createCargoEmp" name="createCargoEmp" style="width:100%">
+                                  <option value="">Elije cargo</option>
+                                  <?php $ctg = $con->query("SELECT * FROM cargo");
+                                      while ($row = $ctg->fetch_assoc()) {
+                                        echo "<option value='".$row['id_cargo']."' ";
+                                        echo ">";
+                                        echo $row['nom_cargo'];
+                                        echo "</option>";
+                                      }
+                                  ?>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <label for="createEstaEmp" class="col-form-label col-form-label-sm">Estado:</label>
+                                <select class="form-control form-control-sm" id="createEstaEmp" name="createEstaEmp">
+                                  <option value="1" selected>Activo</option>
+                                  <option value="0">Inactivo</option>
+                                </select>
+                              </div>
+                            </form>
+                            <div class="row mt-3">
+                              <div class="col-sm-12">
+                                <button type="button" class="btn btn-success shadow-sm btn-sm px-3" id="btnCreateEmp"><i class="fas fa-save mr-2 mt-2 fa-sm text-white-50"></i>Guardar</button>
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="col-sm-6">
+
+                          </div>
+                        </div>
+                        <!-- <div class="row mt-3">
+                          <div class="col-sm-12 text-right">
+                            <button type="button" class="btn btn-primary btn-sm m-auto" id="btnCreateEmp"><i class="fas fa-save mr-2 fa-sm text-white-50"></i>Guardar</button>
+                          </div>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div id="tableEmp"></div>
+                  </div>
+                </div>
               </div>
             </div>
+
+
+            <!-- Content Row -->
+
           </div>
         </div>
         <!-- Footer -->
@@ -79,6 +160,10 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('#tableEmp').load('../componentes/tableemp.php');
+        // $('#createCargoEmp').select2({
+        //   width: 'resolve',
+        //   dropdownParent: $("#ModalNuevoEmp")
+        // });
       });
     </script>
     <script>
@@ -92,10 +177,7 @@
             $('#editIdEmp').val(datos['idempphp']);
             $('#editNombEmp').val(datos['nomempphp']);
             $('#editApeEmp').val(datos['apempphp']);
-            $('#editCuentaEmp').val(datos['cuentaempphp']);
             $('#EditCargoEmp').val(datos['cargoempphp']);
-            $('#editUserEmp').val(datos['userempphp']);
-            $('#editPassEmp').val(datos['passempphp']);
             $('#editEstaEmp').val(datos['estaempphp']);
           }
         })

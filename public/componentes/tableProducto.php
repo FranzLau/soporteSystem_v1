@@ -54,17 +54,17 @@
             ?>
           </td>
           <td><?php echo $mostrarprod[1] ?></td>
-          <td><?php echo $obj->namePresentation( $mostrarprod[10]) ?></td>
+          <td><?php echo $obj->namePresentation( $mostrarprod[12]) ?></td>
           <td><?php echo $mostrarprod[2] ?></td>
           <td><?php echo $mostrarprod[5] ?></td>
           <td><?php echo $mostrarprod[6] ?></td>
-          <td><?php echo $obj->nombEmpleado( $mostrarprod[12]) ?></td>
-          <td><?php echo $mostrarprod[11] ?></td>
+          <td><?php echo $obj->nombEmpleado( $mostrarprod[13]) ?></td>
+          <td><?php echo $mostrarprod[9] ?></td>
           <td class="text-center">
-            <a href="#" class="btn-link-eyes mr-3" title="Detalles"><i class="fas fa-eye"></i></a>
+            <a href="#" class="btn-link-view mr-3" title="Detalles" data-toggle="modal" data-target="#ModalViewsProd" onclick="ViewProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-eye"></i></a>
             <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#ModalUpdateProd" onclick="ReadProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
               <?php
-                if ($_SESSION['loginUser']['user_emp'] == "Administrador"):
+                if ($_SESSION['loginUser']['tipo_user'] == "administrador"):
               ?>
             <a href="#" class="btn-link-delete" title="Eliminar" onclick="deleteProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-trash-alt"></i></a>
               <?php endif; ?>

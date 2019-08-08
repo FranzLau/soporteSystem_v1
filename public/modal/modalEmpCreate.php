@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Nuevo Empleado</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle">Agregar Empleado</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -25,25 +25,10 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="createCuentaEmp" class="col-sm-3 col-form-label col-form-label-sm">Cuenta:</label>
-                <!--<div class="col-sm-3">
-                  <select class="form-control form-control-sm" id="createTipoDocEmp" name="createTipoDocEmp">
-                    <option value="DNI" selected>DNI</option>
-                    <option value="RUC">RUC</option>
-                    <option value="PASAPORTE">PASAPORTE</option>
-                    <option value="otro">Otros</option>
-                  </select>
-                </div>-->
-                <div class="col-sm-6">
-                  <input type="text" class="form-control form-control-sm" id="createCuentaEmp" name="createCuentaEmp" placeholder="Cuenta">
-                </div>
-              </div>
-              <div class="form-group row">
                 <label for="createCargoEmp" class="col-sm-3 col-form-label col-form-label-sm">Cargo:</label>
                 <div class="col-sm-9">
-                  <!-- <input type="text" class="form-control form-control-sm" id="createTelfEmp" name="createTelfEmp" placeholder="Ingresa tu Celular"> -->
-                  <select class="form-control form-control-sm" id="createCargoEmp" name="createCargoEmp">
-                    <option value="">Elije producto</option>
+                  <select class="form-control form-control-sm" id="createCargoEmp" name="createCargoEmp" style="width:100%;z-index:999999">
+                    <option value="">Elije cargo</option>
     								<?php $ctg = $con->query("SELECT * FROM cargo");
     										while ($row = $ctg->fetch_assoc()) {
     											echo "<option value='".$row['id_cargo']."' ";
@@ -55,40 +40,14 @@
                   </select>
                 </div>
               </div>
-              <!-- <div class="form-group row">
-                <label for="createEmailEmp" class="col-sm-3 col-form-label col-form-label-sm">Area:</label>
-                <div class="col-sm-9">
-                  <input type="email" class="form-control form-control-sm" id="createEmailEmp" name="createEmailEmp" placeholder="tu-correo@ejemplo.com">
-                </div>
-              </div>
               <div class="form-group row">
-                <label for="createEmailEmp" class="col-sm-3 col-form-label col-form-label-sm">Gerencia:</label>
-                <div class="col-sm-9">
-                  <input type="email" class="form-control form-control-sm" id="createEmailEmp" name="createEmailEmp" placeholder="tu-correo@ejemplo.com">
-                </div>
-              </div> -->
-              <div class="form-group row" hidden>
                 <label for="createEstaEmp" class="col-sm-3 col-form-label col-form-label-sm">Estado:</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control form-control-sm" id="createEstaEmp" name="createEstaEmp" value="1">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="createUserEmp" class="col-sm-3 col-form-label col-form-label-sm">Niveles:</label>
-                <div class="col-sm-9">
-                  <!-- <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm"> -->
-                  <select class="form-control form-control-sm" id="createUserEmp" name="createUserEmp">
-                    <option value="Ninguno">Ninguno</option>
-                    <option value="Usuario">Usuario</option>
-                    <option value="Administrador">Administrador</option>
+                  <!-- <input type="text" class="form-control form-control-sm"  value="1"> -->
+                  <select class="form-control form-control-sm" id="createEstaEmp" name="createEstaEmp">
+                    <option value="1" selected>Activo</option>
+                    <option value="0">Inactivo</option>
                   </select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="createPassEmp" class="col-sm-3 col-form-label col-form-label-sm">Password:</label>
-                <div class="col-sm-9">
-                  <input type="text" aria-describedby="emailHelp" class="form-control form-control-sm" id="createPassEmp" name="createPassEmp" placeholder="Ingresa una contraseña">
-                  <small id="emailHelp" class="form-text text-muted">* Solo para quien use el Sistema.</small>
                 </div>
               </div>
             </form>

@@ -9,7 +9,7 @@ if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
 	$usuariolg = $con->real_escape_string($_POST['userphp']);
 	$passwordlg = $con->real_escape_string($_POST['passphp']);
 
-	if ($newsql = $con->prepare("SELECT id_emp,nom_emp,doc_emp,user_emp,pass_emp FROM empleado WHERE doc_emp = ? AND pass_emp=?")) {
+	if ($newsql = $con->prepare("SELECT id_user,nom_user,pass_user,estado_user,tipo_user,id_emp FROM usuario WHERE nom_user = ? AND pass_user=?")) {
 
 		$newsql->bind_param('ss',$usuariolg,$passwordlg);
 		$newsql->execute();
@@ -19,7 +19,7 @@ if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
 			$datos = $resultado->fetch_assoc();
 			$_SESSION['loginUser'] = $datos;
 
-			echo json_encode(array('error' => false,'tipo' => $datos['user_emp']));
+			echo json_encode(array('error' => false,'tipo' => $datos['nom_user']));
 		}else{
 			echo json_encode(array('error' => true));
 		}

@@ -12,11 +12,8 @@ class crud
 	$datos = array('idempphp'=>$ver[0],
 					'nomempphp'=>$ver[1],
 					'apempphp'=>$ver[2],
-					'cuentaempphp'=>$ver[3],
-					'estaempphp'=>$ver[4],
-					'userempphp'=>$ver[5],
-					'passempphp'=>$ver[6],
-					'cargoempphp'=>$ver[7]);
+					'estaempphp'=>$ver[3],
+					'cargoempphp'=>$ver[4]);
 	return $datos;
 	}
   public function deleteEmple($idemp){
@@ -54,10 +51,11 @@ class crud
 						'ProdModelo'=>$datoProd[6],
 						'ProdAf'=>$datoProd[7],
 						'ProdEstado'=>$datoProd[8],
-						'ProdIDcateg'=>$datoProd[9],
-						'ProdIDpresent'=>$datoProd[10],
-						'ProdIDsede'=>$datoProd[11],
-						'ProdIDemp'=>$datoProd[12]);
+            'ProdSede'=>$datoProd[9],
+            'ProdDetalle'=>$datoProd[10],
+						'ProdIDcateg'=>$datoProd[11],
+						'ProdIDpresent'=>$datoProd[12],
+						'ProdIDemp'=>$datoProd[13]);
 		return $datos;
 	}
   public function deleteProducto($idprod){

@@ -23,9 +23,9 @@
 
 <script src="../../assets/js/logout.js"></script>
 <script src="../../assets/js/helpers.js"></script>
-<script src="../../assets/js/select-client.js"></script>
+<script src="../../assets/js/select2-admin.js"></script>
 
-<script src="../../assets/js/empleadojs.js"></script>
+<script src="../../assets/js/empleadorjs.js"></script>
 <script src="../../assets/js/productsjs.js"></script>
 <script src="../../assets/js/customers.js"></script>
 <script src="../../assets/js/categoryjs.js"></script>

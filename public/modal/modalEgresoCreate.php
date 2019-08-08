@@ -13,14 +13,14 @@
           <div class="col-sm-12">
             <form id="formNewEgreso">
               <div class="form-group row">
-                <label for="nomNewCargo" class="col-sm-3 col-form-label col-form-label-sm">Descripcion:</label>
+                <label for="nomNewCargo" class="col-sm-3 col-form-label col-form-label-sm">Nombre:</label>
                 <div class="col-sm-9">
                   <input type="text" name="nomNewCargo" id="nomNewCargo" class="form-control form-control-sm">
 
                 </div>
               </div>
               <div class="form-group row">
-                <label for="detalleNewCargo" class="col-sm-3 col-form-label col-form-label-sm">Detalles:</label>
+                <label for="detalleNewCargo" class="col-sm-3 col-form-label col-form-label-sm">Descripción:</label>
                 <div class="col-sm-9">
                   <textarea name="detalleNewCargo" id="detalleNewCargo" aria-describedby="datesRetiro" placeholder="Escriba los detalles aquí..." class="form-control" rows="3" cols="50"></textarea>
                   <small id="datesRetiro" class="form-text text-muted">Todos los campos son obligatorios.</small>
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary w-100" id="btnCreateEgreso"><i class="fas fa-save fa-sm mr-2"></i> Guardar</button>
+        <button type="button" class="btn btn-success" id="btnCreateEgreso"><i class="fas fa-save fa-sm mr-2"></i> Guardar</button>
       </div>
     </div>
   </div>

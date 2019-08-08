@@ -15,8 +15,8 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
         <a class="nav-link" href="products.php">
-          <i class="fas fa-fw fa-desktop"></i>
-          <span>Equipos</span></a>
+          <i class="fas fa-fw fa-warehouse"></i>
+          <span>Almacén</span></a>
       </li>
 
       <!-- Divider -->
@@ -24,13 +24,27 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Recepción
+        Distribución
       </div>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-laptop"></i>
+          <span>Equipos</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-headset"></i>
+          <span>Incidencias</span></a>
+      </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
 
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
 
           <i class="fas fa-fw fa-warehouse"></i>
@@ -47,34 +61,12 @@
             <a class="collapse-item" href="#"><i class="fas fa-video mr-2"></i>Polycom</a>
           </div>
         </div>
-      </li>
-
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-headset"></i>
-          <span>Incidencias</span></a>
-      </li>
-
-
-
-
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fab fa-fw fa-black-tie"></i>
-          <span>Personal</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Empleados:</h6>
-            <a class="collapse-item" href="empleado.php"><i class="fas fa-users mr-2"></i>Trabajadores</a>
-            <a class="collapse-item" href="cargo.php"><i class="fas fa-graduation-cap mr-2"></i>Cargos</a>
-          </div>
-        </div>
       </li> -->
+
+
+
+
+
 
       <!-- Divider -->
       <hr class="sidebar-divider">

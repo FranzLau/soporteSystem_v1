@@ -17,7 +17,7 @@ jQuery(document).ready(function() {
 		})
 		.done(function(r) {
 			if (r==0) {
-				alertify.error("El nombre de la habitación ya existe!");
+				alertify.error("El Equipo ya existe");
 			}else if(!r.error){
 				$('#tableProducto').load('../componentes/tableProducto.php');
 				$('#formCreateNewProd')[0].reset();
