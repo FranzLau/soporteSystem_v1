@@ -14,4 +14,13 @@ $(document).ready(function(){
   $('#sedeNewProd').select2({
     width: 'resolve'
   });
+  $('#responEquipo').select2({
+    width: 'resolve'
+  });
+  $('#responDestinEmp').select2({
+    width: 'resolve'
+  });
+  $('#responOrigenEmp').select2({
+    width: 'resolve'
+  });
 });

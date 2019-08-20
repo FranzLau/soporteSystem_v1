@@ -29,7 +29,7 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="computer.php">
           <i class="fas fa-fw fa-laptop"></i>
           <span>Equipos</span></a>
       </li>
@@ -78,7 +78,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="move.php">
           <i class="fas fa-truck-loading"></i>
           <span>Movimientos</span></a>
       </li>
