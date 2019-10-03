@@ -19,7 +19,7 @@
   </form> -->
 
   <div class="d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-    <h3 class="mb-0">Bienvenido</h3>
+    <P class="mb-0"><i class="fas fa-desktop mr-2"></i>SOPORTE - TIC</P>
   </div>
 
   <!-- Topbar Navbar -->

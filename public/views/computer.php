@@ -31,7 +31,7 @@
 
             <div class="row">
               <div class="col-6 text-left">
-                <h1 class="h3 mb-0 text-gray-800">Equipos</h1>
+                <h1 class="h3 mb-0 text-gray-800">Dominios</h1>
               </div>
               <div class="col-6">
                 <ul class="nav nav-pills nav-pills-primary justify-content-end" id="pills-tab" role="tablist">

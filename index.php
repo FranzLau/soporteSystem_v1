@@ -38,7 +38,8 @@ if(isset($_SESSION['loginUser'])){
           <div class="form-lg m-auto">
             <div class="row mb-2">
               <div class="col-sm-12 text-center">
-                <h3>SOPORTE</h3>
+                <h3><i class="fas fa-bolt mr-2"></i>ELECTROSUR</h3>
+                <p>SISTEMA CONTROL DE EQUIPOS</p>
               </div>
             </div>
             <div class="row">
@@ -92,7 +93,7 @@ if(isset($_SESSION['loginUser'])){
                   </form>
                   <button class="btn btn-info-melody w-100" id="btnlg"><i class="fas fa-sign-in-alt mr-2"></i> Ingresar</button>
 
-                  
+
                 </div>
               </div>
 

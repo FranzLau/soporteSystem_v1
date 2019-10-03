@@ -34,7 +34,7 @@
 
             <div class="row">
               <div class="col-6 text-left">
-                <h1 class="h3 mb-0 text-gray-800">Almacén</h1>
+                <h1 class="h3 mb-0 text-gray-800">Equipos</h1>
               </div>
               <div class="col-6">
                 <!-- <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ModalNewProd"><i class="fas fa-plus mr-lg-2 fa-sm text-white-50"></i><span class="d-none d-lg-inline">Nuevo Equipo</span></button>
@@ -151,12 +151,21 @@
                           <!-- Fila 2 Form -->
 
                           <div class="form-row">
-
-                            <div class="form-group col-md-12">
+                            <div class="form-group col-md-3">
+                              <label for="ubicNewProd" class="col-form-label col-form-label-sm">Ubicación:</label>
+                              <!-- <textarea class="form-control form-control-sm" rows="3"></textarea> -->
+                              <!-- <input type="text" class="form-control form-control-sm" id="ubicNewProd" name="ubicNewProd"> -->
+                              <select class="form-control form-control-sm" id="ubicNewProd" name="ubicNewProd">
+                                <option value="Almacén">Almacén</option>
+                                <option value="Oficina">Oficina</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-9">
                               <label for="obsNewProd" class="col-form-label col-form-label-sm">Observación:</label>
                               <!-- <textarea class="form-control form-control-sm" rows="3"></textarea> -->
                               <input type="text" class="form-control form-control-sm" id="obsNewProd" name="obsNewProd">
                             </div>
+
                           </div>
 
                           <!-- Fila dentro de Form -->

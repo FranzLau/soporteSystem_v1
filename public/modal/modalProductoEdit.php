@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Actualizar Habitación</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle">Actualizar Equipo</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -15,12 +15,7 @@
           <div class="row">
             <div class="col-sm-6">
               <!-- <p class="font-weight-bold"><i class="fas fa-user-edit mr-2"></i>Datos Básicos</p> -->
-              <div class="form-group row">
-                <label for="nomEditProd" class="col-sm-4 col-form-label col-form-label-sm">Nombre:</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control form-control-sm" id="nomEditProd" name="nomEditProd">
-                </div>
-              </div>
+
               <div class="form-group row">
                 <label for="presentEditProd" class="col-sm-4 col-form-label col-form-label-sm">Tipo:</label>
                 <div class="col-sm-8">
@@ -38,6 +33,12 @@
                 </div>
               </div>
               <div class="form-group row">
+                <label for="serieEditProd" class="col-sm-4 col-form-label col-form-label-sm">Serie:</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control form-control-sm" id="serieEditProd" name="serieEditProd">
+                </div>
+              </div>
+              <div class="form-group row">
                 <label for="marcaEditProd" class="col-sm-4 col-form-label col-form-label-sm">Marca:</label>
                 <div class="col-sm-8">
                   <input type="text" class="form-control form-control-sm" id="marcaEditProd" name="marcaEditProd">
@@ -47,74 +48,6 @@
                 <label for="modeloEditProd" class="col-sm-4 col-form-label col-form-label-sm">Modelo:</label>
                 <div class="col-sm-8">
                   <input type="text" class="form-control form-control-sm" id="modeloEditProd" name="modeloEditProd">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="sedeEditProd" class="col-sm-4 col-form-label col-form-label-sm">Sede</label>
-                <div class="col-sm-8">
-                  <select class="form-control form-control-sm" id="sedeEditProd" name="sedeEditProd">
-                    <option value="S.E. 28 de Julio">S.E. 28 de Julio</option>
-                    <option value="S.E. Leguia">S.E. Leguia</option>
-                    <option value="S.E. Para">S.E. Para</option>
-                    <option value="Moquegua">Moquegua</option>
-                    <option value="Ilo">Ilo</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="responEditProd" class="col-sm-4 col-form-label col-form-label-sm">Responsable:</label>
-                <div class="col-sm-8">
-                  <select class="form-control form-control-sm" id="responEditProd" name="responEditProd">
-                    <option value="">Elije a uno</option>
-    								<?php $ctg = $con->query("SELECT * FROM empleado");
-    										while ($row = $ctg->fetch_assoc()) {
-    											echo "<option value='".$row['id_emp']."' ";
-    											echo ">";
-    											echo $row['nom_emp'];
-                          echo " ";
-                          echo $row['ape_emp'];
-    											echo "</option>";
-    										}
-    								?>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="estadoEditProd" class="col-sm-4 col-form-label col-form-label-sm">Estado</label>
-                <div class="col-sm-8">
-                  <select class="form-control form-control-sm" id="estadoEditProd" name="estadoEditProd">
-                    <option value="Operativo">Operativo</option>
-                    <option value="Prestado">Prestado</option>
-                    <option value="Inoperativo">Inoperativo</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <!-- <p class="font-weight-bold"><i class="fas fa-user-cog mr-2"></i>Datos Técnicos</p> -->
-              <div class="form-group row mt-2">
-                <label for="serieEditProd" class="col-sm-4 col-form-label col-form-label-sm">Serie:</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control form-control-sm" id="serieEditProd" name="serieEditProd">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="ipEditProd" class="col-sm-4 col-form-label col-form-label-sm">IP:</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control form-control-sm" id="ipEditProd" name="ipEditProd">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="macEditProd" class="col-sm-4 col-form-label col-form-label-sm">MAC:</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control form-control-sm" id="macEditProd" name="macEditProd">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="afEditProd" class="col-sm-4 col-form-label col-form-label-sm">AF:</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control form-control-sm" id="afEditProd" name="afEditProd">
                 </div>
               </div>
               <div class="form-group row">
@@ -130,6 +63,44 @@
     											echo "</option>";
     										}
     								?>
+                  </select>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-sm-6">
+              <!-- <p class="font-weight-bold"><i class="fas fa-user-cog mr-2"></i>Datos Técnicos</p> -->
+              <div class="form-group row">
+                <label for="afEditProd" class="col-sm-4 col-form-label col-form-label-sm">AF:</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control form-control-sm" id="afEditProd" name="afEditProd">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="af2EditProd" class="col-sm-4 col-form-label col-form-label-sm">AF 2:</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control form-control-sm" id="af2EditProd" name="af2EditProd">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="ubicEditProd" class="col-sm-4 col-form-label col-form-label-sm">Ubicación</label>
+                <div class="col-sm-8">
+                  <select class="form-control form-control-sm" id="ubicEditProd" name="ubicEditProd">
+                    <option value="Almacén">Almacén</option>
+                    <option value="Oficina">Oficina</option>
+
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="estadoEditProd" class="col-sm-4 col-form-label col-form-label-sm">Estado</label>
+                <div class="col-sm-8">
+                  <select class="form-control form-control-sm" id="estadoEditProd" name="estadoEditProd">
+                    <option value="Operativo">Operativo</option>
+                    <option value="Prestado">Prestado</option>
+                    <option value="Inoperativo">Inoperativo</option>
                   </select>
                 </div>
               </div>

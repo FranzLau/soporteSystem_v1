@@ -10,26 +10,26 @@
     <thead>
       <tr>
         <th><i class="fas fa-star"></i></th>
-        <th>NOMBRE</th>
         <th>TIPO</th>
         <th>SERIE</th>
         <th>MARCA</th>
         <th>MODELO</th>
-        <th>RESPONSABLE</th>
-        <th>SEDE</th>
+        <th>ACTIVO FIJO</th>
+        <th>ACTIVO 2</th>
+        <th>UBICACIÓN</th>
         <th class="text-center">ACCION</th>
       </tr>
     </thead>
     <tfoot>
       <tr>
         <th><i class="fas fa-star"></i></th>
-        <th>NOMBRE</th>
         <th>TIPO</th>
         <th>SERIE</th>
         <th>MARCA</th>
         <th>MODELO</th>
-        <th>RESPONSABLE</th>
-        <th>SEDE</th>
+        <th>ACTIVO FIJO</th>
+        <th>ACTIVO 2</th>
+        <th>UBICACIÓN</th>
         <th class="text-center">ACCION</th>
       </tr>
     </tfoot>
@@ -38,11 +38,11 @@
         <tr>
           <td>
             <?php
-            if ($mostrarprod[8]=="Operativo") {
+            if ($mostrarprod[7]=="Operativo") {
             ?>
               <i class="fas fa-star" style="color:#1cc88a"></i>
             <?php
-          }elseif ($mostrarprod[8]=="Prestado") {
+          }elseif ($mostrarprod[7]=="Prestado") {
             ?>
               <i class="fas fa-star" style="color:#f6c23e"></i>
             <?php
@@ -53,13 +53,14 @@
             }
             ?>
           </td>
+
+          <td><?php echo $obj->namePresentation( $mostrarprod[10]) ?></td>
           <td><?php echo $mostrarprod[1] ?></td>
-          <td><?php echo $obj->namePresentation( $mostrarprod[12]) ?></td>
           <td><?php echo $mostrarprod[2] ?></td>
+          <td><?php echo $mostrarprod[3] ?></td>
+          <td><?php echo $mostrarprod[4] ?></td>
           <td><?php echo $mostrarprod[5] ?></td>
           <td><?php echo $mostrarprod[6] ?></td>
-          <td><?php echo $obj->nombEmpleado( $mostrarprod[13]) ?></td>
-          <td><?php echo $mostrarprod[9] ?></td>
           <td class="text-center">
             <a href="#" class="btn-link-view mr-3" title="Detalles" data-toggle="modal" data-target="#ModalViewsProd" onclick="ViewProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-eye"></i></a>
             <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#ModalUpdateProd" onclick="ReadProduct('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-pencil-alt"></i></a>

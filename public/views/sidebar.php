@@ -3,10 +3,10 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-cogs"></i>
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-cogs"></i>--><i class="fas fa-bolt"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SOPORTE</div>
+        <div class="sidebar-brand-text mx-3">Electrosur</div>
       </a>
 
       <!-- Divider -->
@@ -15,8 +15,8 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
         <a class="nav-link" href="products.php">
-          <i class="fas fa-fw fa-warehouse"></i>
-          <span>Almacén</span></a>
+          <i class="fas fa-fw fa-laptop"></i>
+          <span>Equipos</span></a>
       </li>
 
       <!-- Divider -->
@@ -30,14 +30,15 @@
       <!-- Nav Item - Tables -->
       <li class="nav-item">
         <a class="nav-link" href="computer.php">
-          <i class="fas fa-fw fa-laptop"></i>
-          <span>Equipos</span></a>
+          <i class="fas fa-fw fa-database"></i>
+          <span>Dominios</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-headset"></i>
+
+          <i class="fas fa-fw fa-phone fa-flip-horizontal"></i>
           <span>Incidencias</span></a>
       </li>
 
